@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/upgradesChancesLayout"
+        android:id="@+id/upgradesEggLayout"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.45"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/upgradesEggsListRareEggImg"
+            app:layout_constraintEnd_toStartOf="@+id/upgradesEggsListUncommonEggTxt"
+            android:src="@drawable/egg_uncommon"
+            android:background="@android:color/transparent"
+            android:id="@+id/upgradesEggsListUncommonEggImg"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.45"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toEndOf="@+id/upgradesEggsListUncommonEggImg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/upgradesEggsListUncommonEggPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
+            android:autoSizeTextType="uniform"
+            android:text="Uncommon Egg"
+            android:id="@+id/upgradesEggsListUncommonEggTxt"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.45"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toStartOf="@+id/upgradesEggsListUncommonEggTxt"
+            app:layout_constraintTop_toBottomOf="@+id/upgradesEggsListUncommonEggTxt"
+            app:layout_constraintBottom_toTopOf="@+id/upgradesEggsListUncommonEggBuy1"
+            app:layout_constraintEnd_toEndOf="@id/upgradesEggsListUncommonEggTxt"
+            android:textAlignment="center"
+            android:autoSizeTextType="uniform"
+            android:text="100G"
+            android:id="@+id/upgradesEggsListUncommonEggPrice"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.2"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toStartOf="@id/upgradesEggsListUncommonEggTxt"
+            app:layout_constraintTop_toBottomOf="@+id/upgradesEggsListUncommonEggPrice"
+            app:layout_constraintBottom_toTopOf="@+id/upgradesEggsListRareEggTxt"
+            app:layout_constraintEnd_toStartOf="@+id/upgradesEggsListUncommonEggBuy10"
+            android:textAlignment="center"
+            android:text="x1"
+            android:id="@+id/upgradesEggsListUncommonEggBuy1"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.2"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toEndOf="@+id/upgradesEggsListUncommonEggBuy1"
+            app:layout_constraintTop_toBottomOf="@+id/upgradesEggsListUncommonEggPrice"
+            app:layout_constraintBottom_toTopOf="@+id/upgradesEggsListRareEggTxt"
+            app:layout_constraintEnd_toEndOf="@+id/upgradesEggsListUncommonEggTxt"
+            android:textAlignment="center"
+            android:text="x10"
+            android:id="@+id/upgradesEggsListUncommonEggBuy10"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.45"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upgradesEggsListUncommonEggImg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/upgradesEggsListRareEggTxt"
+            android:src="@drawable/egg_rare"
+            android:background="@android:color/transparent"
+            android:id="@+id/upgradesEggsListRareEggImg"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.45"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toEndOf="@+id/upgradesEggsListRareEggImg"
+            app:layout_constraintTop_toBottomOf="@+id/upgradesEggsListUncommonEggBuy1"
+            app:layout_constraintBottom_toTopOf="@+id/upgradesEggsListRareEggPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
+            android:autoSizeTextType="uniform"
+            android:text="Rare Egg"
+            android:id="@+id/upgradesEggsListRareEggTxt"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.45"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toStartOf="@+id/upgradesEggsListRareEggTxt"
+            app:layout_constraintTop_toBottomOf="@+id/upgradesEggsListRareEggTxt"
+            app:layout_constraintBottom_toTopOf="@+id/upgradesEggsListRareEggBuy1"
+            app:layout_constraintEnd_toEndOf="@id/upgradesEggsListRareEggTxt"
+            android:textAlignment="center"
+            android:autoSizeTextType="uniform"
+            android:text="250G"
+            android:id="@+id/upgradesEggsListRareEggPrice"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.2"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toStartOf="@id/upgradesEggsListRareEggTxt"
+            app:layout_constraintTop_toBottomOf="@+id/upgradesEggsListRareEggPrice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/upgradesEggsListRareEggBuy10"
+            android:textAlignment="center"
+            android:text="x1"
+            android:id="@+id/upgradesEggsListRareEggBuy1"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.2"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toEndOf="@+id/upgradesEggsListRareEggBuy1"
+            app:layout_constraintTop_toBottomOf="@+id/upgradesEggsListRareEggPrice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/upgradesEggsListRareEggTxt"
+            android:textAlignment="center"
+            android:text="x10"
+            android:id="@+id/upgradesEggsListRareEggBuy10"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upgradesEggLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/upgradesChancesLayout"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/upgradesCritChanceLayout"
+            android:id="@+id/upgradesEggMultiplierLayout"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.45"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.45"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/upgradesEggMultiplierLvl"
+                app:layout_constraintEnd_toStartOf="@+id/upgradesEggMultiplierValue"
+                android:id="@+id/upgradesEggMultiplierTxt"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:text="Tap Multiplier"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.45"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.45"
+                app:layout_constraintStart_toStartOf="@+id/upgradesEggMultiplierTxt"
+                app:layout_constraintTop_toBottomOf="@+id/upgradesEggMultiplierTxt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/upgradesEggMultiplierTxt"
+                android:id="@+id/upgradesEggMultiplierLvl"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:text="Lvl Needed: XX"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.2"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintStart_toEndOf="@+id/upgradesEggMultiplierTxt"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/upgradesEggMultiplierValue"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:text="x1"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.3"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.7"
+                app:layout_constraintStart_toEndOf="@+id/upgradesEggMultiplierValue"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/upgradesEggMultiplierBtn"
+                android:textAlignment="center"
+                android:text="UPGRADE"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upgradesEggMultiplierLayout"
+            app:layout_constraintBottom_toTopOf="@+id/upgradesExtraEggChanceLayout"
+            android:id="@+id/upgradesCritChanceLayout"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.45"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.45"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/upgradesCritChanceLvl"
+                app:layout_constraintEnd_toStartOf="@+id/upgradesCritChanceValue"
+                android:id="@+id/upgradesCritChanceTxt"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:text="Crit Chance"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.45"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.45"
+                app:layout_constraintStart_toStartOf="@+id/upgradesCritChanceTxt"
+                app:layout_constraintTop_toBottomOf="@+id/upgradesCritChanceTxt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/upgradesCritChanceTxt"
+                android:id="@+id/upgradesCritChanceLvl"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:text="Lvl Needed: XX"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.2"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintStart_toEndOf="@+id/upgradesCritChanceTxt"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/upgradesCritChanceValue"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:text="0.5%"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.3"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.7"
+                app:layout_constraintStart_toEndOf="@+id/upgradesCritChanceValue"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/upgradesCritChanceBtn"
+                android:textAlignment="center"
+                android:text="UPGRADE"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upgradesCritChanceLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/upgradesExtraEggChanceLayout"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.45"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.45"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/upgradesExtraEggChanceLvl"
+                app:layout_constraintEnd_toStartOf="@+id/upgradesExtraEggChanceValue"
+                android:id="@+id/upgradesExtraEggChanceTxt"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:text="Extra Egg Chance"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.45"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.45"
+                app:layout_constraintStart_toStartOf="@+id/upgradesExtraEggChanceTxt"
+                app:layout_constraintTop_toBottomOf="@+id/upgradesExtraEggChanceTxt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/upgradesExtraEggChanceTxt"
+                android:id="@+id/upgradesExtraEggChanceLvl"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:text="Lvl Needed: XX"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.2"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintStart_toEndOf="@+id/upgradesExtraEggChanceTxt"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/upgradesExtraEggChanceValue"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:text="0.1%"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.3"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.7"
+                app:layout_constraintStart_toEndOf="@+id/upgradesExtraEggChanceValue"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/upgradesExtraEggChanceBtn"
+                android:textAlignment="center"
+                android:text="UPGRADE"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

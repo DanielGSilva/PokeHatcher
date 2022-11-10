@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dexRec"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Space
+        android:id="@+id/dexMenuSpace"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dexMenuLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dexMenuSpace"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1">
+
+        <ImageView
+            android:id="@+id/dexMenuButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/rounded_corners_purple_500"
+            android:src="@drawable/up_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dexMenuMainLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/rounded_corners_purple_500"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dexMenuObtainedFiltersSectionLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/dexMenuEggTypeFiltersSectionLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="1">
+
+                <TextView
+                    android:id="@+id/dexMenuObtainedFiltersAll"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:autoSizeTextType="uniform"
+                    android:background="@drawable/filter_selected"
+                    android:gravity="center"
+                    android:text="All"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/dexMenuObtainedFiltersLayout"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.95"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.15" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dexMenuObtainedFiltersLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.95"
+                    app:layout_constraintStart_toEndOf="@+id/dexMenuObtainedFiltersAll"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.8">
+
+                    <TextView
+                        android:id="@+id/dexMenuFiltersObtained"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/filter_selected"
+                        android:gravity="center"
+                        android:text="Obtained"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_percent="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.49" />
+
+                    <TextView
+                        android:id="@+id/dexMenuFiltersUnobtained"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/filter_selected"
+                        android:gravity="center"
+                        android:text="Unobtained"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_percent="1"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.49" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dexMenuEggTypeFiltersSectionLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/dexMenuEvolutionStageFiltersSectionLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dexMenuObtainedFiltersSectionLayout"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="1">
+
+                <TextView
+                    android:id="@+id/dexMenuEggTypeFiltersAll"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:autoSizeTextType="uniform"
+                    android:background="@drawable/filter_selected"
+                    android:gravity="center"
+                    android:text="All"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/dexMenuEggTypeFiltersLayout"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.95"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.15" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dexMenuEggTypeFiltersLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.95"
+                    app:layout_constraintStart_toEndOf="@+id/dexMenuEggTypeFiltersAll"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.8">
+
+                    <ImageView
+                        android:id="@+id/dexMenuFiltersEggType0"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/filter_selected"
+                        android:gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/egg_common"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_percent="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.245" />
+
+                    <ImageView
+                        android:id="@+id/dexMenuFiltersEggType1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/filter_selected"
+                        android:gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/egg_uncommon"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/dexMenuFiltersEggType2"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_percent="1"
+                        app:layout_constraintStart_toEndOf="@+id/dexMenuFiltersEggType0"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.245" />
+
+
+                    <ImageView
+                        android:id="@+id/dexMenuFiltersEggType2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/filter_selected"
+                        android:gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/egg_rare"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/dexMenuFiltersEggType3"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_percent="1"
+                        app:layout_constraintStart_toEndOf="@+id/dexMenuFiltersEggType1"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.245" />
+
+                    <ImageView
+                        android:id="@+id/dexMenuFiltersEggType3"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/filter_selected"
+                        android:gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/egg_legendary"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_percent="1"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.245" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dexMenuEvolutionStageFiltersSectionLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/dexMenuReadyToEvolveFiltersSectionLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dexMenuEggTypeFiltersSectionLayout"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="1">
+
+                <TextView
+                    android:id="@+id/dexMenuEvolutionStageFiltersAll"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:autoSizeTextType="uniform"
+                    android:background="@drawable/filter_selected"
+                    android:gravity="center"
+                    android:text="All"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/dexMenuEvolutionStageFiltersLayout"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.95"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.15" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dexMenuEvolutionStageFiltersLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.95"
+                    app:layout_constraintStart_toEndOf="@+id/dexMenuEvolutionStageFiltersAll"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.8">
+
+                    <TextView
+                        android:id="@+id/dexMenuFiltersBasic"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/filter_selected"
+                        android:gravity="center"
+                        android:text="Basic"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_percent="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.32" />
+
+                    <TextView
+                        android:id="@+id/dexMenuFiltersStage1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/filter_selected"
+                        android:gravity="center"
+                        android:text="Stage1"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/dexMenuFiltersStage2"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_percent="1"
+                        app:layout_constraintStart_toEndOf="@id/dexMenuFiltersBasic"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.32" />
+
+                    <TextView
+                        android:id="@+id/dexMenuFiltersStage2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/filter_selected"
+                        android:gravity="center"
+                        android:text="Stage2"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_percent="1"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.32" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dexMenuReadyToEvolveFiltersSectionLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/dexMenuSortSectionLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dexMenuEvolutionStageFiltersSectionLayout"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dexMenuReadyToEvolveFiltersLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.95"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.9667">
+
+                    <TextView
+                        android:id="@+id/dexMenuFiltersReadyToEvolve"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/filter_unselected"
+                        android:gravity="center"
+                        android:text="Ready To Evolve"
+                        android:textColor="@color/grey_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_percent="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.495" />
+
+                    <TextView
+                        android:id="@+id/dexMenuFiltersFinalForms"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/filter_unselected"
+                        android:gravity="center"
+                        android:text="Final Forms"
+                        android:textColor="@color/grey_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_percent="1"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.495" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dexMenuSortSectionLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dexMenuReadyToEvolveFiltersSectionLayout"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dexMenuSortLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.95"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.9667">
+
+                    <TextView
+                        android:id="@+id/dexMenuSortByNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/filter_selected"
+                        android:gravity="center"
+                        android:text="Sort by Dex No"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_percent="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.495" />
+
+                    <TextView
+                        android:id="@+id/dexMenuSortByQty"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/filter_unselected"
+                        android:gravity="center"
+                        android:text="Sort by Qty"
+                        android:textColor="@color/grey_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_default="percent"
+                        app:layout_constraintHeight_percent="1"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.495" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

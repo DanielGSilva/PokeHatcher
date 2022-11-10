@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_egg"
+        android:icon="@drawable/ic_baseline_brightness_1_24"
+        android:title="Egg"/>
+
+    <item
+        android:id="@+id/nav_dex"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:title="Dex"
+        />
+
+    <item
+        android:id="@+id/nav_upgrades"
+        android:icon="@drawable/ic_baseline_upgrade_24"
+        android:title="Upgrades"/>
+
+</menu>

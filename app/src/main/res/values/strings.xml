@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PokéHatcher</string>
+    <string name="title_activity_dex">dexActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="x1">x1</string>
+    <string name="x10">x10</string>
+    <string name="new_pokemon">New Pokémon!</string>
+</resources>

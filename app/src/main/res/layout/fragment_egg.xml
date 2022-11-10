@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:clipChildren="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/eggLayout"
+        android:visibility="visible">
+
+        <ImageButton
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/imgEgg"
+            android:src="@drawable/egg_common"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.3"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.25"
+            android:scaleType="fitCenter"
+            android:id="@+id/imgCrit"
+            android:src="@drawable/crit"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.08"
+            android:text="Common Egg"
+            android:autoSizeTextType="uniform"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/pbEgg"
+            android:id="@+id/txtEgg"
+            />
+
+
+        <TextView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.08"
+            android:text="0000 / 0000"
+            android:autoSizeTextType="uniform"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/imgEgg"
+            app:layout_constraintTop_toBottomOf="@+id/txtEgg"
+            android:id="@+id/pbEgg"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/eggHatchLayout"
+        android:visibility="invisible"
+        >
+
+        <ImageButton
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/imgEggHatch"
+            android:src="@drawable/egg_common"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.08"
+            android:text="Common Egg"
+            android:autoSizeTextType="uniform"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/txtEggHatchNew"
+            android:id="@+id/txtEggHatchName"
+            />
+
+
+        <TextView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.08"
+            android:text="@string/new_pokemon"
+            android:autoSizeTextType="uniform"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/imgEggHatch"
+            app:layout_constraintTop_toBottomOf="@+id/txtEggHatchName"
+            android:id="@+id/txtEggHatchNew"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.1"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        android:scaleType="fitCenter"
+        android:id="@+id/imgHatchGlow"
+        android:src="@drawable/egg_hatch"
+        android:visibility="invisible"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/eggHatchMoneyLayout"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/eggHatchMoneyImg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            android:id="@+id/eggHatchMoneyTxt"
+            android:autoSizeTextType="uniform"
+            android:text="20"
+        />
+
+        <ImageView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toEndOf="@+id/eggHatchMoneyTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:scaleType="fitCenter"
+            android:id="@+id/eggHatchMoneyImg"
+            android:src="@drawable/money"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/eggHatchXPLayout"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/eggHatchXPImg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            android:id="@+id/eggHatchXPTxt"
+            android:autoSizeTextType="uniform"
+            android:text="20"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toEndOf="@+id/eggHatchXPTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:scaleType="fitCenter"
+            android:id="@+id/eggHatchXPImg"
+            android:text="XP"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

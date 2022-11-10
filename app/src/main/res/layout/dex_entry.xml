@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/dexEntryGoBackButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="h,1:1"
+        android:src="?attr/homeAsUpIndicator"
+        android:background="@drawable/round_btn_purple500"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.1"
+        android:layout_margin="5dp"
+        />
+
+    <TextView
+        android:id="@+id/dexEntryName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:text="Pokemon Name"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/dexEntryInfoLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dexEntryInfoLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/dexEntryEvolutionLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dexEntryName"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1">
+
+
+        <ImageButton
+            android:id="@+id/dexEntryImg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pokeball"
+            app:layout_constraintEnd_toStartOf="@+id/dexEntryInfo"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.45" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dexEntryInfo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toEndOf="@+id/dexEntryImg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.45">
+
+
+            <TextView
+                android:id="@+id/dexEntryNumberTxt"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:text="Number:"
+                app:layout_constraintBottom_toTopOf="@+id/dexEntryNumber"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.08"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <TextView
+                android:id="@+id/dexEntryNumber"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:text="000"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/dexEntryClassificationTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dexEntryNumberTxt"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <TextView
+                android:id="@+id/dexEntryClassificationTxt"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:text="Classification:"
+                app:layout_constraintBottom_toTopOf="@+id/dexEntryClassification"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.08"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dexEntryNumber"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <TextView
+                android:id="@+id/dexEntryClassification"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:text="Classification Pokémon"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/dexEntryHeightTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dexEntryClassificationTxt"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="1" />
+
+            <TextView
+                android:id="@+id/dexEntryHeightTxt"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:text="Height:"
+                app:layout_constraintBottom_toTopOf="@+id/dexEntryHeight"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.08"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dexEntryClassification"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <TextView
+                android:id="@+id/dexEntryHeight"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:text="0 m"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/dexEntryWeightTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dexEntryHeightTxt"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <TextView
+                android:id="@+id/dexEntryWeightTxt"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:text="Weight:"
+                app:layout_constraintBottom_toTopOf="@+id/dexEntryWeight"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.08"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dexEntryHeight"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <TextView
+                android:id="@+id/dexEntryWeight"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:text="0 kg"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/dexEntryTypeTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dexEntryWeightTxt"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <TextView
+                android:id="@+id/dexEntryTypeTxt"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:text="Type:"
+                app:layout_constraintBottom_toTopOf="@+id/dexEntryType"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.08"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dexEntryWeight"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <TextView
+                android:id="@+id/dexEntryType"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
+                android:text="Normal/Normal"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dexEntryTypeTxt"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dexEntryEvolutionLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dexEntryInfoLayout"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dexEntryEvolutions"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
