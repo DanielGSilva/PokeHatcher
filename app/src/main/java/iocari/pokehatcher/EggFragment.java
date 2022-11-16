@@ -265,6 +265,7 @@ public class EggFragment extends Fragment {
 
         this.eggVM.setEggType(type);
         this.eggVM.setEggHatchMoneyTxt(this.playerVM.getEggMoney(type));
+        this.eggVM.setEggHatchXPTxt(this.playerVM.getEggMoney(type));
 
         switch (eggVM.getEggTypeValue()) {
             case 0:
