@@ -182,7 +182,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintWidth_percent="0.25"
         android:layout_height="0dp"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.075"
@@ -231,7 +231,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintWidth_percent="0.25"
         android:layout_height="0dp"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.075"
